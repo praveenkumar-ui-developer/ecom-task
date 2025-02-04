@@ -19,10 +19,15 @@ export const GlobalProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCart((prev) => [...prev, product]);
+    alert('Item added to cart successfully')
+
   };
 
   const removeFromCart = (productId) => {
-    setCart((prev) => prev.filter((item) => item.id !== productId));
+    if (window.confirm("Are you sure you want to delete this item?")) {
+      setCart((prev) => prev.filter((item) => item.id !== productId));
+    }
+    alert("Item removed from cart successfully")
   };
 
   return (

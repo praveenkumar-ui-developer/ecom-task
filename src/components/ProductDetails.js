@@ -29,9 +29,9 @@ const ProductDetails = () => {
           component="img"
           src={product.image}
           alt={product.title}
-          sx={{ width: { xs: "100%", md: "50%" }, objectFit: "contain", p: 2 }}
+          sx={{ width: { xs: "100%", md: "25%" }, objectFit: "contain", p: 4 }}
         />
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 7 }}>
           <Typography variant="h4">{product.title}</Typography>
           <Typography variant="h6" color="text.secondary">
             ${product.price}

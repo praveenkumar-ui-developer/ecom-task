@@ -14,11 +14,13 @@ const Navbar = () => {
   const handleLogin = async () => {
     const loggedInUser = await loginWithGoogle();
     setUser(loggedInUser);
+    alert(`Welcome back ${loggedInUser.displayName}`)
   };
 
   const handleLogout = async () => {
     await logout();
     setUser(null);
+    alert('see you')
   };
 
   return (
